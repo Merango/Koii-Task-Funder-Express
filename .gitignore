@@ -1,4 +1,10 @@
-node_modules
+node_modules/
+dist/
 .env
-.env.funder
-*.pem
+logs/
+*.log
+.vitest-cache/
+coverage/
+.DS_Store
+.vscode/
+.idea/
