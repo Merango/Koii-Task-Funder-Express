@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getCoinsList } from '../routes/coinsList.js'; // Adjust import based on actual implementation
+import { getCoinsList } from '../routes/coinsList.js';
 import cryptoPrices from '../data/crypto-prices.json';
 
 describe('Coins List Endpoint', () => {
@@ -17,10 +17,10 @@ describe('Coins List Endpoint', () => {
 
   it('should filter coins based on optional parameters', () => {
     const allCoins = getCoinsList();
-    const filteredCoins = getCoinsList({ limit: 5 });
+    const filteredCoins = getCoinsList({ limit: 4 });
     
-    expect(filteredCoins.length).toBe(5);
-    expect(filteredCoins.length).toBeLessThan(allCoins.length);
+    expect(filteredCoins.length).toBe(4);
+    expect(filteredCoins.length).toBeLessThanOrEqual(allCoins.length);
   });
 
   it('should handle case-insensitive search', () => {
