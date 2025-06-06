@@ -19,7 +19,8 @@ export function getCoinsList(options = {}) {
     throw new Error('Search term must be a string');
   }
 
-  let filteredCoins = [...cryptoPrices];
+  // Convert JSON object to array of coins
+  let filteredCoins = Object.values(cryptoPrices);
 
   // Apply search filter (case-insensitive)
   if (search) {
