@@ -1,19 +1,21 @@
 {
-  "name": "auto-funder-express",
+  "name": "crypto-mock-api",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run",
+    "test:watch": "vitest watch"
   },
-  "keywords": [],
+  "keywords": ["cryptocurrency", "mock-api"],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Mock CoinGecko API with centralized caching",
   "dependencies": {
-    "@_koii/create-task-cli": "^1.1.3-beta.1",
-    "axios": "^1.7.7",
-    "crypto": "^1.0.1",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.0"
+    "express": "^4.21.0",
+    "node-cache": "^5.1.2"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.2"
   }
 }
